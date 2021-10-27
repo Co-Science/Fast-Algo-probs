@@ -1,7 +1,10 @@
 ```go
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func elapsed(what string) func() {
 	start := time.Now()
