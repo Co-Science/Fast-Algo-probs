@@ -1,4 +1,4 @@
-## Time (without printing)
+## Time (without print function)
 
 - fast_exponent_recurse.go
   - 80ms for 1000,000 iteration
