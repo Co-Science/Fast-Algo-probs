@@ -1,3 +1,3 @@
-# Algo-probs
+# Fast-Algo-probs
 
-Algo-problems for fast and efficient time complexity
+Fast-Algo-problems for fast and efficient time complexity
