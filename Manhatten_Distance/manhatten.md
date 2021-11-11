@@ -1,4 +1,6 @@
 Given n integer coordinates. The task is to find sum of manhattan distance between all pairs of coordinates. Manhattan Distance between two points (x1, y1) and (x2, y2) is: |x1 - x2| + |y1 - y2|Examples : 
+
+
 ```
 Input : n = 4
         point1 = { -1, 5 }
@@ -18,6 +20,11 @@ Distance of { 2, 3 } from { 3, 5 } is 3.
 Therefore, sum = 19 + 3 = 22.
 ```
 
+---
+<details>
+  <summary>:zap: Method 1: (Brute Force) </summary>
+<!--START_SECTION:waka-->
+	
 Method 1: (Brute Force) 
 
 Time Complexity: O(n2)The idea is to run two nested loop i.e for each each point, find manhattan distance for all other points.  
@@ -64,7 +71,16 @@ func main() {
 }
 ```
 
-Method 2: (Efficient Approach) 
+<!--END_SECTION:waka-->
+</details>	
+
+---
+
+<details>
+  <summary>:zap: Method 2: (Efficient Approach)  </summary>
+<!--START_SECTION:waka-->
+	
+
 
 1. The idea is to use Greedy Approach. First observe, the manhattan formula can be decomposed into two independent sums, one for the difference between x coordinates and the second between y coordinates. If we know how to compute one of them we can use the same method to compute the other. So now we will stick to compute the sum of x coordinates distance.
 2. Let's assume that we have calculated the sum of distances between any two points till a point xi-1 for all values of x's smaller than xi-1 , let this sum be res and now we have to calculate the distance between any two points with xi included, where xi is the next greater point, To calculate the distance of each point from the next greater point xi ,  we can add the existing sum of differences res with the distance of xi from all the points xk which are less than xi. Hence the sum between any two points will now be equal to res + ∑(xi - xk) , where xi is the current point from which differences are being measured, and xk are all the points less than xi.
@@ -81,6 +97,10 @@ previous points till index i - 1
 4. For the new index i , we need to add the difference of the current index xi from all the previous indices xk  < xi
 
 5. If we sort all points in non-decreasing order, we can easily compute the desired sum of distances along one axis between each pair of coordinates in O(N) time, processing points from left to right and using the above method. Also, we don't have to concern if two points are equal coordinates, after sorting points in non-decreasing order, we say that a point xi-1 is smaller xi if and only if it appears earlier in the sorted array.Below is the implementation of this approach: 
+
+
+<!--END_SECTION:waka-->
+</details>
 
 Time Complexity : O(nlogn) 
 
