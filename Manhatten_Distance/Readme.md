@@ -1,7 +1,7 @@
 Given n integer coordinates. The task is to find sum of manhattan distance between all pairs of coordinates. Manhattan Distance between two points (x1, y1) and (x2, y2) is: |x1 - x2| + |y1 - y2|Examples : 
 
 
-```
+```go
 Input : n = 4
         point1 = { -1, 5 }
         point2 = { 1, 6 }
@@ -28,7 +28,7 @@ Therefore, sum = 19 + 3 = 22.
 Method 1: (Brute Force) 
 
 Time Complexity: O(n2)The idea is to run two nested loop i.e for each each point, find manhattan distance for all other points.  
-```
+```go
 // Go code to find sum of
 // Manhattan distance between all
 // the pairs of given points
@@ -104,7 +104,7 @@ previous points till index i - 1
 
 Time Complexity : O(nlogn) 
 
-```
+```go
 // Go Program to find sum of Manhattan
 // distances between all the pairs of
 // given points
