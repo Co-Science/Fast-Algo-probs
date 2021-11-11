@@ -1,6 +1,6 @@
 
 <details>
-  <summary>fast_pow.go (better)</summary>
+  <summary>fast_pow.go (better:zap:)</summary>
 <!--START_SECTION:waka-->
 	
 ```go
